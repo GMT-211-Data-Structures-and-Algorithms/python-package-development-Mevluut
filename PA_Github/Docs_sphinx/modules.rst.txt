@@ -1,0 +1,10 @@
+geometry paketi
+===============
+
+points\_lines modülü
+--------------------
+
+.. automodule:: geometry.points_lines
+   :members:
+   :undoc-members:
+   :show-inheritance:
