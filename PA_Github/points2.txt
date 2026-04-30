@@ -1,0 +1,7 @@
+point
+5
+10,2,Bölüm Binası
+15,30,Merkez Kütüphane
+5,27,Spor Salonu
+-4,17,Yemekhane
+-15,25,BAM
