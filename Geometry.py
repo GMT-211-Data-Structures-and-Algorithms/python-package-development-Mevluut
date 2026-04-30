@@ -1,40 +1,76 @@
 class point:
+    """Represents a point in 2D space with optional name."""
+
     def __init__(self, x, y, name=""):
+        """
+        :param x: Latitude (enlem) of the point
+        :param y: Longitude (boylam) of the point
+        :param name: Optional name for the point
+        """
         self.enlem = x
         self.boylam = y
         self.name = name
 
     def get_enlem(self):
+        """Returns the latitude (enlem) of the point.
+        
+        :return: Latitude value
+        :rtype: float
+        """
         return self.enlem
 
     def get_boylam(self):
+        """Returns the longitude (boylam) of the point.
+        
+        :return: Longitude value
+        :rtype: float
+        """
         return self.boylam
 
     def __str__(self):
+        """Returns string representation of the point."""
         if self.name:
-            return "point ({},{}) {}" .format(self.enlem, self.boylam, self.name)  
-        return "point ({},{})" .format(self.enlem, self.boylam)
+            return "point ({},{}) {}".format(self.enlem, self.boylam, self.name)
+        return "point ({},{})".format(self.enlem, self.boylam)
 
 
 class line:
+    """Represents a line consisting of multiple points."""
+
     def __init__(self, points, name=""):
-        self.points = points  
+        """
+        :param points: List of point objects forming the line
+        :param name: Optional name for the line
+        """
+        self.points = points
         self.name = name
 
     def __str__(self):
+        """Returns string representation of the line."""
         return "Line '{}' with {} points".format(self.name, len(self.points))
 
     def get_points(self):
+        """Returns the list of points in the line.
+        
+        :return: List of point objects
+        :rtype: list
+        """
         return self.points
 
 
 def read_points(filename):
+    """Reads points from a text file.
+    
+    :param filename: Path to the input file
+    :type filename: str
+    :return: List of point objects
+    :rtype: list
+    """
     points = []
     with open(filename, "r", encoding="utf-8") as f:
         lines = f.read().splitlines()
 
-    
-    count = int(lines[1])# lines[0] = "point", lines[1] = count
+    count = int(lines[1])
     for i in range(count):
         parts = lines[2 + i].split(",")
         x = float(parts[0])
@@ -46,12 +82,18 @@ def read_points(filename):
 
 
 def read_lines(filename):
+    """Reads lines from a text file.
+    
+    :param filename: Path to the input file
+    :type filename: str
+    :return: List of line objects
+    :rtype: list
+    """
     line_objects = []
     with open(filename, "r", encoding="utf-8") as f:
         raw = f.read().splitlines()
 
-     
-    count = int(raw[1]) # raw[0] = "line", raw[1] = count of lines
+    count = int(raw[1])
     idx = 2
     for _ in range(count):
         name = raw[idx]
