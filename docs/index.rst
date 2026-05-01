@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. Geometry_Package documentation master file
+
 Geometry_Package documentation
 ==============================
 
@@ -10,5 +12,5 @@ Geometry_Package documentation
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: Geometry
-   :members:
+   point_page
+   line_page

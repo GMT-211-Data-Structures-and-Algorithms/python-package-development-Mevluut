@@ -14,6 +14,7 @@
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Point" href="point_page.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -34,95 +35,20 @@
   <section id="geometry-package-documentation">
 <h1>Geometry_Package documentation<a class="headerlink" href="#geometry-package-documentation" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="point_page.html">Point</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="point_page.html#Point.point"><code class="docutils literal notranslate"><span class="pre">point</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="line_page.html">Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="line_page.html#Line.line"><code class="docutils literal notranslate"><span class="pre">line</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="line_page.html#Line.read_lines"><code class="docutils literal notranslate"><span class="pre">read_lines()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="line_page.html#Line.read_points"><code class="docutils literal notranslate"><span class="pre">read_points()</span></code></a></li>
+</ul>
+</li>
+</ul>
 </div>
-<dl class="py class" id="module-Geometry">
-<dt class="sig sig-object py" id="Geometry.line">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">Geometry.</span></span><span class="sig-name descname"><span class="pre">line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Geometry.line" title="Link to this definition">¶</a></dt>
-<dd><p>Represents a line consisting of multiple points.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Geometry.line.get_points">
-<span class="sig-name descname"><span class="pre">get_points</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Geometry.line.get_points" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the list of points in the line.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List of point objects</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="Geometry.point">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">Geometry.</span></span><span class="sig-name descname"><span class="pre">point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Geometry.point" title="Link to this definition">¶</a></dt>
-<dd><p>Represents a point in 2D space with optional name.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Geometry.point.get_boylam">
-<span class="sig-name descname"><span class="pre">get_boylam</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Geometry.point.get_boylam" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the longitude (boylam) of the point.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Longitude value</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Geometry.point.get_enlem">
-<span class="sig-name descname"><span class="pre">get_enlem</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Geometry.point.get_enlem" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the latitude (enlem) of the point.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Latitude value</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="Geometry.read_lines">
-<span class="sig-prename descclassname"><span class="pre">Geometry.</span></span><span class="sig-name descname"><span class="pre">read_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Geometry.read_lines" title="Link to this definition">¶</a></dt>
-<dd><p>Reads lines from a text file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Path to the input file</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>List of line objects</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="Geometry.read_points">
-<span class="sig-prename descclassname"><span class="pre">Geometry.</span></span><span class="sig-name descname"><span class="pre">read_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Geometry.read_points" title="Link to this definition">¶</a></dt>
-<dd><p>Reads points from a text file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Path to the input file</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>List of point objects</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 
 
@@ -151,11 +77,17 @@
     </div>
 </search>
 <script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="point_page.html">Point</a></li>
+<li class="toctree-l1"><a class="reference internal" href="line_page.html">Line</a></li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="point_page.html" title="next chapter">Point</a></li>
   </ul></li>
 </ul>
 </div>

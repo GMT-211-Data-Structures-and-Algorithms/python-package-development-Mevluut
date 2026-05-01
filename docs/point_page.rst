@@ -1,0 +1,5 @@
+Point
+=====
+
+.. automodule:: Point
+   :members:
