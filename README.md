@@ -1,17 +1,13 @@
 Geometry_Package
-
 A Python package for working with 2D Points and Lines.
 
 Project Structure
 python-package-development-Mevluut/
-├── docs/
-│   ├── conf.py
-│   ├── index.rst
-│   ├── point_page.rst
-│   ├── line_page.rst
-│   └── _build/html/     
+├── .github
+├── docs
 ├── Point.py
 ├── Line.py
+├── Unit_Test.py
 ├── point1.txt
 ├── points2.txt
 ├── line1.txt
@@ -24,15 +20,30 @@ Classes
 Represents a point in 2D space.
 - `get_enlem()` → returns x coordinate (latitude)
 - `get_boylam()` → returns y coordinate (longitude)
+- `distance(other)` → returns Euclidean distance to another point
 
 `line(points, name="")` — Line.py
 Represents a line consisting of multiple points.
 - `get_points()` → returns list of points
+- `perpendicular_distance(p)` → returns perpendicular distance from a point to the line
 
 Functions
 
 - `read_points(filename)` → reads points from a text file
 - `read_lines(filename)` → reads lines from a text file
+
+Unit Tests
+
+Tests are written with Python's `unittest` module in `Unit_Test.py`.
+
+To run tests locally:
+```bash
+python -m unittest Unit_Test.py
+```
+
+GitHub Actions
+
+Tests run automatically on every push via GitHub Actions.
 
 Documentation
 
