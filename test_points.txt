@@ -1,0 +1,4 @@
+point
+2
+10,20,okul
+30,40,park

@@ -1,4 +1,6 @@
+import math
 from Point import point
+
 class line:
     """Represents a line consisting of multiple points."""
 
@@ -21,6 +23,28 @@ class line:
         :rtype: list
         """
         return self.points
+
+    def perpendicular_distance(self, p):
+        """Returns the perpendicular distance from a point to this line.
+        
+        Uses the first two points of the line to define the line equation.
+        
+        :param p: The point to measure distance from
+        :type p: point
+        :return: Perpendicular distance from the point to the line
+        :rtype: float
+        """
+        x1 = self.points[0].get_enlem()
+        y1 = self.points[0].get_boylam()
+        x2 = self.points[1].get_enlem()
+        y2 = self.points[1].get_boylam()
+        x0 = p.get_enlem()
+        y0 = p.get_boylam()
+
+        # |( y2-y1)*x0 - (x2-x1)*y0 + x2*y1 - y2*x1| / sqrt((y2-y1)^2 + (x2-x1)^2)
+        numerator = abs((y2 - y1) * x0 - (x2 - x1) * y0 + x2 * y1 - y2 * x1)
+        denominator = math.sqrt((y2 - y1) ** 2 + (x2 - x1) ** 2)
+        return numerator / denominator
 
 
 def read_points(filename):

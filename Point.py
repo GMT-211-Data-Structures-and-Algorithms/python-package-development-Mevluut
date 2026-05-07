@@ -1,3 +1,5 @@
+import math
+
 class point:
     """Represents a point in 2D space with optional name."""
 
@@ -26,6 +28,16 @@ class point:
         :rtype: float
         """
         return self.boylam
+
+    def distance(self, other):
+        """Returns the Euclidean distance between this point and another point.
+        
+        :param other: The other point
+        :type other: point
+        :return: Distance between the two points
+        :rtype: float
+        """
+        return math.sqrt((self.enlem - other.enlem) ** 2 + (self.boylam - other.boylam) ** 2)
 
     def __str__(self):
         """Returns string representation of the point."""
